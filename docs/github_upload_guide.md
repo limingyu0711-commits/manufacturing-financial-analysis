@@ -1,6 +1,6 @@
 # GitHub Upload and Pages Deployment Guide
 
-> No remote operation was performed during local preparation. Review the files and commands before running them.
+> This guide documents the reviewed upload and deployment process. Re-run the checks before any future release.
 
 ## 1. Pre-upload review
 

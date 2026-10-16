@@ -200,7 +200,7 @@ For the target repository, the expected Pages URL is:
 https://limingyu0711-commits.github.io/manufacturing-financial-analysis/
 ```
 
-This repository has not been uploaded or modified remotely by the delivery process.
+The static Dashboard is deployed from the reviewed `main` branch through the included GitHub Actions workflow.
 
 ## AI-assisted development
 
