@@ -1,0 +1,5 @@
+Metric,Budget,Actual,Variance,Variance %,Unit,Interpretation
+Revenue,32864964.32,33881930.72,1016966.4,0.030944,EUR,Higher is favorable
+COGS,22176631.07,23169053.86,992422.79,0.044751,EUR,Higher is unfavorable
+Gross Profit,10688333.25,10712876.86,24543.61,0.002296,EUR,Higher is favorable
+Gross Margin,0.32522,0.316183,-0.903708,,% / pp variance,Positive percentage-point variance is favorable

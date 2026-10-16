@@ -1,0 +1,10 @@
+{
+  "name": "manufacturing-financial-analysis",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Workbook generation and Dashboard tests for the synthetic manufacturing FP&A portfolio project.",
+  "scripts": {
+    "build:workbook": "node scripts/build_workbook.mjs",
+    "test:dashboard": "node --test tests/test_dashboard_metrics.js"
+  }
+}

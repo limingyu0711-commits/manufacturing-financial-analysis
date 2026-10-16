@@ -1,0 +1,2 @@
+"""Automated financial-integrity tests."""
+

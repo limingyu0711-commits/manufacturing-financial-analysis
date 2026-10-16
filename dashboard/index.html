@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Manufacturing FP&A dashboard built with synthetic 2025 automotive-components data."
+    />
+    <title>Manufacturing Financial Analysis Dashboard</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" data-i18n="skipLink">Skip to dashboard</a>
+
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">AM</div>
+        <div>
+          <p class="eyebrow" data-i18n="companyName">Apex Mobility Components Ltd.</p>
+          <h1 data-i18n="dashboardTitle">Manufacturing Financial Analysis</h1>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="report-context">
+          <span data-i18n="managementView">Management view</span>
+          <strong>2025 · EUR</strong>
+        </div>
+        <div class="language-toggle" role="group" aria-label="Language selection">
+          <button type="button" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" data-language="zh" aria-pressed="false">中文</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="disclaimer" role="note">
+      <strong data-i18n="disclaimerTitle">Synthetic Data / Simulated Company.</strong>
+      <span data-i18n="disclaimerText">Portfolio project only. No real company information is used.</span>
+    </div>
+
+    <main id="main-content" class="dashboard-shell">
+      <section class="filter-panel" aria-labelledby="filter-title">
+        <div>
+          <p class="section-kicker" data-i18n="reportingScope">Reporting scope</p>
+          <h2 id="filter-title" data-i18n="performanceFilters">Performance filters</h2>
+        </div>
+        <label>
+          <span data-i18n="fromMonth">From month</span>
+          <select id="start-month" aria-label="Start month"></select>
+        </label>
+        <label>
+          <span data-i18n="toMonth">To month</span>
+          <select id="end-month" aria-label="End month"></select>
+        </label>
+        <label>
+          <span data-i18n="productLine">Product line</span>
+          <select id="product-line" aria-label="Product line"></select>
+        </label>
+        <button id="reset-filters" class="secondary-button" type="button" data-i18n="reset">Reset</button>
+      </section>
+
+      <section class="scope-row" aria-live="polite">
+        <div>
+          <span class="scope-label" data-i18n="selectedPeriod">Selected period</span>
+          <strong id="selected-period">January–December 2025</strong>
+        </div>
+        <div>
+          <span class="scope-label" data-i18n="selectedBusiness">Selected business</span>
+          <strong id="selected-product">All product lines</strong>
+        </div>
+        <span id="record-count" class="record-count">36 records</span>
+      </section>
+
+      <section class="kpi-grid" aria-label="Key financial indicators">
+        <article class="kpi-card">
+          <div class="kpi-heading">
+            <span data-i18n="totalRevenue">Total Revenue</span>
+            <span class="kpi-unit">EUR</span>
+          </div>
+          <strong id="revenue-kpi" class="kpi-value">—</strong>
+          <div id="revenue-detail" class="kpi-detail">—</div>
+        </article>
+        <article class="kpi-card">
+          <div class="kpi-heading">
+            <span data-i18n="grossProfit">Gross Profit</span>
+            <span class="kpi-unit">EUR</span>
+          </div>
+          <strong id="gross-profit-kpi" class="kpi-value">—</strong>
+          <div id="gross-profit-detail" class="kpi-detail">—</div>
+        </article>
+        <article class="kpi-card">
+          <div class="kpi-heading">
+            <span data-i18n="grossMargin">Gross Margin</span>
+            <span class="kpi-unit">%</span>
+          </div>
+          <strong id="gross-margin-kpi" class="kpi-value">—</strong>
+          <div id="gross-margin-detail" class="kpi-detail">—</div>
+        </article>
+        <article class="kpi-card accent-card">
+          <div class="kpi-heading">
+            <span data-i18n="revenueVariance">Revenue Variance</span>
+            <span class="kpi-unit">A − B</span>
+          </div>
+          <strong id="variance-kpi" class="kpi-value">—</strong>
+          <div id="variance-detail" class="kpi-detail">—</div>
+        </article>
+      </section>
+
+      <section class="analysis-grid">
+        <article class="panel revenue-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker" data-i18n="revenueAnalysis">Revenue analysis</p>
+              <h2 data-i18n="monthlyRevenueTrend">Monthly revenue trend</h2>
+            </div>
+            <span class="unit-label">EUR m</span>
+          </div>
+          <div class="chart-legend" aria-hidden="true">
+            <span><i class="legend-line budget"></i><span data-i18n="budget">Budget</span></span>
+            <span><i class="legend-line actual"></i><span data-i18n="actual">Actual</span></span>
+          </div>
+          <svg
+            id="revenue-chart"
+            class="line-chart"
+            role="img"
+            aria-label="Monthly budget and actual revenue trend"
+            viewBox="0 0 800 300"
+          ></svg>
+        </article>
+
+        <article class="panel cost-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker" data-i18n="costAnalysis">Cost analysis</p>
+              <h2 data-i18n="actualCogsBreakdown">Actual COGS breakdown</h2>
+            </div>
+            <span class="unit-label">EUR</span>
+          </div>
+          <div class="cost-layout">
+            <div id="cost-donut" class="donut" role="img" aria-label="Actual COGS breakdown chart">
+              <div class="donut-center">
+                <span data-i18n="totalCogs">Total COGS</span>
+                <strong id="cogs-total">—</strong>
+              </div>
+            </div>
+            <div id="cost-legend" class="cost-legend"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="analysis-grid lower-grid">
+        <article class="panel product-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker" data-i18n="profitabilityAnalysis">Profitability analysis</p>
+              <h2 data-i18n="productPerformance">Product performance</h2>
+            </div>
+            <span class="unit-label">EUR m / %</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="productLine">Product line</th>
+                  <th scope="col" data-i18n="revenue">Revenue</th>
+                  <th scope="col" data-i18n="revenueVarShort">Revenue var.</th>
+                  <th scope="col" data-i18n="grossProfit">Gross profit</th>
+                  <th scope="col" data-i18n="grossMargin">Gross margin</th>
+                </tr>
+              </thead>
+              <tbody id="product-table-body"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="panel bridge-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker" data-i18n="businessPerformance">Business performance</p>
+              <h2 data-i18n="grossProfitBridge">Gross profit variance bridge</h2>
+            </div>
+            <span class="unit-label">EUR m</span>
+          </div>
+          <div id="bridge-chart" class="bridge-chart"></div>
+          <p class="chart-note">
+            <span data-i18n="bridgeNote">Volume, mix, price and unit-cost effects reconcile to actual gross profit less budget.</span>
+          </p>
+        </article>
+      </section>
+
+      <section class="panel commentary-panel" aria-labelledby="commentary-title">
+        <div class="panel-heading">
+          <div>
+            <p class="section-kicker" data-i18n="financeCommentary">Finance commentary</p>
+            <h2 id="commentary-title" data-i18n="keyFindings">Key findings for the selected scope</h2>
+          </div>
+          <span class="evidence-label" data-i18n="dataSupported">Data-supported</span>
+        </div>
+        <div id="commentary-list" class="commentary-list"></div>
+      </section>
+
+      <section id="empty-state" class="empty-state" hidden>
+        <h2 data-i18n="noRecords">No records match this selection</h2>
+        <p data-i18n="noRecordsHelp">Reset the filters or choose a valid month range.</p>
+      </section>
+    </main>
+
+    <footer>
+      <span data-i18n="footerTitle">Manufacturing Financial Analysis Dashboard</span>
+      <span data-i18n="varianceConvention">Variance convention: Actual − Budget</span>
+    </footer>
+
+    <script src="js/dashboard-data.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/metrics.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
