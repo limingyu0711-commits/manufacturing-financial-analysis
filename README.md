@@ -3,6 +3,8 @@
 > **Synthetic Data / Simulated Company**  
 > Portfolio project for manufacturing FP&A, Controlling, and financial data analysis. No real company information is used.
 
+## Dashboard preview
+
 ![Manufacturing Financial Analysis Dashboard — English view](dashboard/assets/dashboard-preview.png)
 
 ## Project overview
@@ -28,7 +30,7 @@ The deliverable combines a traceable Python calculation pipeline, a formula-driv
 - [x] Phase 4 — financial reconciliation and functional testing
 - [x] Phase 5 — documentation, screenshots, and GitHub Pages guidance
 
-## Business scope
+## Business scenario
 
 The simulated company has three product lines:
 
@@ -49,7 +51,7 @@ Dashboard modules include:
 - Month and product-line filters
 - Complete English/Chinese interface switching with local language persistence
 
-## Financial conventions
+## Financial analysis methods
 
 All amount, volume, and percentage variances begin with:
 
@@ -69,7 +71,7 @@ Variance = Actual - Budget
 
 See `docs/data_dictionary.md` and `docs/financial_methodology.md` for controlled definitions and analytical limitations.
 
-## Technology
+## Technology stack
 
 - Python
 - Pandas
@@ -100,7 +102,7 @@ README.md
 requirements.txt
 ```
 
-## Run locally
+## How to run
 
 Recommended environment: Python 3.12 and Node.js 20 or later. The Dashboard and its JavaScript tests use only browser APIs and Node.js built-ins, so there are no public npm runtime dependencies to install.
 
@@ -140,7 +142,7 @@ python -m http.server 8000 --directory dashboard
 
 Open `http://127.0.0.1:8000/` and use the `EN / 中文` control to switch languages.
 
-## Automated tests
+## Financial validation
 
 Run the Python suite:
 
@@ -195,16 +197,20 @@ After reviewing the project and pushing it to GitHub:
 For the target repository, the expected Pages URL is:
 
 ```text
-https://565zybn2sn.github.io/manufacturing-financial-analysis/
+https://limingyu0711-commits.github.io/manufacturing-financial-analysis/
 ```
 
 This repository has not been uploaded or modified remotely by the delivery process.
 
-## AI-assisted development statement
+## AI-assisted development
 
 This is an AI-assisted simulated financial analysis project. The project owner defines the business requirements, financial logic, analytical scope, and performs result verification. AI assists with code implementation, documentation, and test construction. All outputs remain subject to the project owner’s review.
 
 本项目为 AI 辅助开发的模拟财务分析项目。项目使用者负责业务需求、财务逻辑设计、分析范围与结果核验；AI 辅助代码实现、文档编写及测试构建。所有结果均需由项目使用者审核。
+
+## Synthetic data disclaimer
+
+All company names, product lines, operating drivers, prices, costs, budgets, actuals, and management commentary in this repository are synthetic and relate only to a simulated company. They must not be interpreted as actual information from Bosch or any other real enterprise.
 
 ## Limitations
 

@@ -15,7 +15,7 @@ Confirm that `README.md`, `dashboard/`, `data/`, `src/`, `tests/`, `reports/`, a
 
 ## 2. Connect the local project to GitHub
 
-First confirm that `565zybn2sn/manufacturing-financial-analysis` is empty or that replacing its contents is intended. Do not use a force push.
+First confirm that `limingyu0711-commits/manufacturing-financial-analysis` is empty or that replacing its contents is intended. Do not use a force push.
 
 For an empty repository:
 
@@ -25,7 +25,7 @@ git branch -M main
 git add .
 git status --short
 git commit -m "Add manufacturing FP&A analysis dashboard"
-git remote add origin https://github.com/565zybn2sn/manufacturing-financial-analysis.git
+git remote add origin https://github.com/limingyu0711-commits/manufacturing-financial-analysis.git
 git remote -v
 git push -u origin main
 ```
@@ -43,7 +43,7 @@ If the remote repository already contains commits, clone it first and copy the r
 Expected public URL:
 
 ```text
-https://565zybn2sn.github.io/manufacturing-financial-analysis/
+https://limingyu0711-commits.github.io/manufacturing-financial-analysis/
 ```
 
 ## 4. Post-deployment checks
